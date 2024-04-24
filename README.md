@@ -9,9 +9,13 @@ Exemple d'inputs HTML de type radio permettant de forcer le mode d'affichage (au
 Dans l'exemple suivant, la couleur d'arrière-plan utilisée est #333 en mode sombre, ou #ccc en mode clair (ou en mode inconnu).
 
 :root {
+
   color-scheme: light dark;
+  
 }
 
 body {
+
   background-color: light-dark(#ccc, #333);
+  
 }
