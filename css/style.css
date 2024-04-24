@@ -1,1 +1,44 @@
+/* defaults colors */
+:root {
+  color-scheme: light dark;
+  --primary-color: light-dark(#333, #fafafa);
+  --primary-background: light-dark(#e4e4e4, #121212);
+}
 
+:root {
+  &:has(input[name="color-scheme"][value="light dark"]:checked) {
+    color-scheme: light dark;
+  }
+  &:has(input[name="color-scheme"][value="light"]:checked) {
+    color-scheme: light;
+  }
+  &:has(input[name="color-scheme"][value="dark"]:checked) {
+    color-scheme: dark;
+  }
+}
+
+body {
+  color: var(--primary-color);
+  background-color: var(--primary-background);
+  transition: color 0.4s, background-color 0.4s;
+}
+
+/* color theme toggle */
+.toggle-group {
+  border: 2px solid #CCC;
+  border-radius: 24px;
+  inline-size: fit-content;
+  padding: 3px;
+}
+.toggle-group label {
+  border-radius: 21px;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 0.5em 1em;
+  text-align: center;
+  user-select: none;
+}
+.toggle-group label:has(input:checked) {
+  background-color: #CCC;
+  color: #333;
+}
