@@ -19,3 +19,5 @@ body {
   background-color: light-dark(#ccc, #333);
   
 }
+
+les SVG sont agréablement fournis par lucide.dev (https://lucide.dev/)
